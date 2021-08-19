@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="pinnoto-icon-red.png" type="image/x-icon">
     <title>Pinnoto</title>
-</head>
-<body>
+    <meta name="description" content="Who says we need a slogan? Thus cat anyway.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
@@ -37,7 +36,6 @@
         a {
             color: #b3b3b3;
             text-decoration: none;
-            margin-right: 20px;
             font-family: 'JetBrains Mono', monospace;
             font-size: 20px;
         }
@@ -57,36 +55,44 @@
 
         .content {
             text-align: left;
-            width: 520px;
+            width: 730px;
         }
 
         .nav {
             display: flex;
             flex-direction: row;
+            margin-bottom: 25px;
+        }
+
+        .nav a {
+            margin-right: 20px;
         }
 
         .status {
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin: auto;
             margin-top: -10px;
             width: 100%;
-            padding: 0;
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
         }
         .statuscol {
             display: flex;
             flex-direction: column;
             align-content: center;
+            margin: auto;
             margin-top: 20px;
-            min-width: 87px;
+            min-width: 65px;
         }
         .statuscol p, .statuscol code{
             margin: auto;
             margin-bottom: 20px;
         }
         .statuscol p {
-            margin-right: 10px;
-            margin-left: 0px;
+            margin-left: 0;
         }
         .status code {
             max-width: 125px;
@@ -99,21 +105,24 @@
             border-radius: 4px;
         }
         .projects {
-            width: 95%;
+            width: 100%;
         }
         .project {
             display:flex;
             flex-direction: row;
             align-items: center;
-            margin-bottom: -15px;
             justify-content: space-between;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            height:40px;
+            border-bottom: solid 1px #3a3c3f;
         }
         .project h2 {
             font-size: 22px;
             font-family: 'Inter', sans-serif;
+            margin-right: 5px;
         }
         .project code {
-            margin-left: 25px;
             padding-left: 5px;
             padding-right: 5px;
             border-radius: 4px;
@@ -123,41 +132,53 @@
             margin-right: 0;
             font-size:16px;
             text-decoration-line:underline;
+            padding-right: 0;
         }
         footer {
-            margin: auto;
-            text-align: left;
-            width: 520px;
+            text-align: center;
+            width: 100%;
             margin-top: 50px;
         }
         @media screen and (max-width: 600px) {
             .main {
-                width: 460px;
+                width: 450px;
             }
             .content {
                 padding: 20px;
                 padding-top: 0;
-                width: 460px;
+                width: 450px;
             }
             .status {
-                width: 460px;
+                width: 415px;
+                padding-left: 0px;
+                padding-right: 0px;
             }
             footer {
-                width: 460px;
-                margin-left: 30px;
-                font-size: 13px;
+                font-size: 16px;
+                width: 300px;
             }
             footer a {
-                font-size: 13px;
+                font-size: 16px;
             }
             .statuscol {
-                min-width: 60px;
+                min-width: 73.5px;
             }
-            a:nth-child(4) {
-                display:none;
+            .nav a {
+                font-size: 18px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            .projects {
+                width: 415px;
+            }
+            #mira-desc::first-line {
+                content: "hi";
             }
         }
     </style>
+</head>
+<body>
     <div class="main">
         <div class="content">
             <h1 style="display:flex;align-items:center;"><img src="pinnoto-full-white.svg" style="margin-right: 10px;" alt="" height="32px"> Welcome to <b style="margin-left: 5px;">pinnoto.org</b></h1>
@@ -168,7 +189,8 @@
                 <a href="https://pinnoto.org/minetest">Minetest</a>
                 <a href="https://github.com/pinnoto">GitHub</a>
             </div>
-            <p class="description">Hello there! We're a bunch of friends on the internet and this is our open source dev team thing. We host a number of public-facing services and collectively create open-source projects.</p>
+            <p class="description">Hello there! We're a bunch of friends on the internet and this is our open source dev team thing.</p>
+            <p class="description">We host a number of public-facing services and collectively create open-source projects.</p>
             <div class="status">
                 <div class="statuscol">
                     <p>XMPP</p>
@@ -176,38 +198,38 @@
                 </div>
                 <div class="statuscol">
                     <code style="background-color:#ce4460">OFF</code>
-                    <code>OK</code>
+                    <code>ON</code>
                 </div>
                 <div class="statuscol">
                     <p>Matrix</p>
                     <p>Minetest</p>
                 </div>
                 <div class="statuscol">
-                    <code>OK</code>
+                    <code>ON</code>
                     <code style="background-color:#ce4460">OFF</code>
                 </div>
                 <div class="statuscol">
                     <p>Mastodon</p>
                     <p>Flowinity</p>
                 </div>
-                <div class="statuscol">
+                <div class="statuscol" style="min-width: 30px;">
                     <code style="background-color:#ce4460">OFF</code>
                     <code style="background-color:#ce4460">OFF</code>
                 </div>
             </div>
             <h1>Our Projects</h1>
             <div class="projects">
-                <div class="project">
+                <div class="project" style="border-top-left-radius:8px;border-top-right-radius:8px;">
                     <a href="https://github.com/pinnoto/mira"><h2>mira</h2></a>
-                    <p>Powerful EPUB server written in Crystal</p>
+                    <p id="mira-desc">EPUB server and manager written in Crystal</p>
                     <code style="background-color:#93c770;">Active</code>
                 </div>
                 <div class="project">
                     <a href="https://github.com/pinnoto/berri"><h2>berri</h2></a>
-                    <p>Simple, modular and efficient cloud</p>
+                    <p>Simple and modular cloud</p>
                     <code style="background-color:#dfab3b;">WIP</code>
                 </div>
-                <div class="project">
+                <div class="project" style="border-bottom: 0px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;">
                     <a href="https://flowinity.com"><h2>flowinity</h2></a>
                     <p>A blog about tech</p>
                     <code style="background-color:#dfab3b;">WIP</code>
