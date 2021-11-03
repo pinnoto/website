@@ -128,6 +128,10 @@
             border-radius: 4px;
             color: #1d1e20;
         }
+        .desc {
+            display: flex;
+            flex-direction: row;   
+        ]
         footer a {
             margin-right: 0;
             font-size:16px;
@@ -171,6 +175,9 @@
             }
             .projects {
                 width: 415px;
+            }
+            .project {
+                flex-direction: column;   
             }
             #mira-desc::first-line {
                 content: "hi";
@@ -221,18 +228,24 @@
             <div class="projects">
                 <div class="project" style="border-top-left-radius:8px;border-top-right-radius:8px;">
                     <a href="https://github.com/pinnoto/mira"><h2>mira</h2></a>
-                    <p id="mira-desc">EPUB server and manager written in Crystal</p>
-                    <code style="background-color:#93c770;">Active</code>
+                    <div class="desc">
+                        <p>EPUB server and manager written in Crystal</p>
+                        <code style="background-color:#93c770;">Active</code>
+                    </div>
+                </div>
+                <div class="project" style="border-bottom: 0px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;">
+                    <a href="https://github.com/nuemhq/nuem"><h2>nuem</h2></a>
+                    <div class="desc">
+                        <p>Shall we play a game?</p>
+                        <code style="background-color:#93c770;">Active</code>
+                    </div>
                 </div>
                 <div class="project">
                     <a href="https://github.com/pinnoto/berri"><h2>berri</h2></a>
-                    <p>Simple and modular cloud</p>
-                    <code style="background-color:#dfab3b;">WIP</code>
-                </div>
-                <div class="project" style="border-bottom: 0px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;">
-                    <a href="https://flowinity.com"><h2>flowinity</h2></a>
-                    <p>A blog about tech</p>
-                    <code style="background-color:#dfab3b;">WIP</code>
+                    <div class="desc">
+                        <p>Simple and modular cloud</p>
+                        <code style="background-color:#dfab3b;">WIP</code>
+                    </div>
                 </div>
             </div>
         </div>
