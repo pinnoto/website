@@ -1,2 +1,2 @@
 # website
-Minimalist and nice website for Pinnoto
+Pinnoto's nice and minimalist website
